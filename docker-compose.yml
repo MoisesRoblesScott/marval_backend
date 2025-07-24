@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_DATABASE=db_prueba_marval
+      - MYSQL_USER=moy_mysql
+      - MYSQL_PASSWORD=qwerty
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PORT=3306
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql_data:/var/lib/mysql
